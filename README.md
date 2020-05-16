@@ -22,7 +22,7 @@ docker_apt_repo_key  # official Docker APT repository GPG key url
 Dependencies
 ------------
 
-This role doesn not have any dependencies.
+This role does not have any dependencies.
 
 Example Playbook
 ----------------
