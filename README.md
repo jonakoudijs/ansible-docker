@@ -37,7 +37,7 @@ Installing Docker:
 License
 -------
 
-MIT
+[MIT license](LICENSE)
 
 Author Information
 ------------------
