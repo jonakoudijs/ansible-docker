@@ -1,6 +1,6 @@
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-Ansible Docker Role
+Docker Ansible Role
 ===================
 
 Install Docker on Linux
