@@ -1,0 +1,18 @@
+galaxy_info:
+  author: Jona Koudijs
+  description: Install Docker on Linux
+
+  license: MIT
+  min_ansible_version: 2.7
+
+  platforms:
+    - name: Ubuntu
+      versions:
+        - bionic
+        - xenial
+
+  galaxy_tags:
+    - docker
+
+
+dependencies: []
