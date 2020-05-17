@@ -1,4 +1,4 @@
-[![galaxy](https://img.shields.io/badge/galaxy-jonakoudijs.docker-blueviolet.svg)](https://galaxy.ansible.com/jonakoudijs/ansible_docker)
+[![Ansible Galaxy](https://img.shields.io/badge/ansible%20galaxy-jonakoudijs.docker-blueviolet.svg)](https://galaxy.ansible.com/jonakoudijs/ansible_docker)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 Docker Ansible Role
