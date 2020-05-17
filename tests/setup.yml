@@ -20,6 +20,6 @@
       when: ansible_distribution == "CentOS"
     - name: CentOS prerequisites | Make sure pip is installed
       yum:
-        name: python3-pip
+        name: python-pip
         state: present
       when: ansible_distribution == "CentOS"
