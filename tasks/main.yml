@@ -1,10 +1,13 @@
 ---
 # tasks file for docker
 
-- include_vars: "{{ ansible_distribution | lower }}.yml"
+- name: OS specific vars
+  include_vars: "{{ ansible_distribution | lower }}.yml"
 
-- include_tasks: ubuntu.yml
+- name: Ubuntu setup tasks
+  include_tasks: ubuntu.yml
   when: ansible_distribution == "Ubuntu"
 
-- include_tasks: centos.yml
+- name: CentOS setup tasks
+  include_tasks: centos.yml
   when: ansible_distribution == "CentOS"
