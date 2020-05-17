@@ -9,15 +9,14 @@ Install Docker on Linux
 Requirements
 ------------
 
-This role does not have any requirements. However executing with sudo with `become: true` is required.
+This role needs `pip` to be installed. Besides that executing the role as root with `become: true` is required.
 
 Role Variables
 --------------
 
 The following variables are set in `defaults/main.yml` and can be overwritten:
 ```
-docker_apt_repo_url  # official Docker APT repository url
-docker_apt_repo_key  # official Docker APT repository GPG key url
+docker_repo  # Use official Docker package repository
 ```
 
 Dependencies

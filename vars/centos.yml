@@ -1,0 +1,5 @@
+---
+# vars file for docker / centos
+
+docker_repo_url: "https://download.docker.com/linux/centos/{{ ansible_distribution_major_version }}/$basearch/stable"
+docker_repo_key: "https://download.docker.com/linux/centos/gpg"

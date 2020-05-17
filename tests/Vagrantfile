@@ -5,7 +5,8 @@
 hosts = [
   #{ :name => "docker-ubuntu-20", :box => "ubuntu/focal64" },
   { :name => "docker-ubuntu-18", :box => "ubuntu/bionic64" },
-  { :name => "docker-ubuntu-16", :box => "ubuntu/xenial64" }
+  { :name => "docker-ubuntu-16", :box => "ubuntu/xenial64" },
+  { :name => "docker-centos-7",  :box => "centos/7" }
 ]
 
 # configure Vagrant

@@ -1,21 +1,24 @@
 ---
-# tasks file for docker / ubuntu
+# tasks file for docker / centos
 
-- name: Configure Docker repository
-  apt_repository:
-    repo: "{{ docker_repo_url }}"
-    state: present
-    update_cache: false
+- name: Configure Docker YUM repository
+  yum_repository:
+    name: Docker-CE-Stable
+    baseurl: "{{ docker_repo_url }}"
+    description: Docker CE Stable - $basearch
+    gpgcheck: true
   register: status_docker_repo
+  when: docker_repo
 
-- name: Add Docker repository key
-  apt_key:
-    url: "{{ docker_repo_key }}"
+- name: Add Docker YUM repository key
+  rpm_key:
+    key: "{{ docker_repo_key }}"
     state: present
   register: status_docker_repo
+  when: docker_repo
 
 - name: Install Docker CE
-  apt:
+  yum:
     name: ['docker-ce', 'docker-ce-cli', 'containerd.io']
     state: present
     update_cache: "{{ status_docker_repo.changed }}"

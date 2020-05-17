@@ -4,3 +4,22 @@
   become: true
   roles:
     - role: "../../."
+
+  pre_tasks:
+    - name: Ubuntu prerequisites | Make sure pip is installed
+      apt:
+        name: python3-pip
+        state: present
+        update_cache: true
+      when: ansible_distribution == "Ubuntu"
+
+    - name: CentOS prerequisites | Add EPEL repository
+      yum:
+        name: epel-release
+        state: present
+      when: ansible_distribution == "CentOS"
+    - name: CentOS prerequisites | Make sure pip is installed
+      yum:
+        name: python3-pip
+        state: present
+      when: ansible_distribution == "CentOS"
