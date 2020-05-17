@@ -1,7 +1,7 @@
 ---
 # tasks file for docker / centos
 
-- name: Configure Docker YUM repository
+- name: Configure Docker repository
   yum_repository:
     name: Docker-CE-Stable
     baseurl: "{{ docker_repo_url }}"
@@ -10,7 +10,7 @@
   register: status_docker_repo
   when: docker_repo
 
-- name: Add Docker YUM repository key
+- name: Add Docker repository key
   rpm_key:
     key: "{{ docker_repo_key }}"
     state: present
